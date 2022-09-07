@@ -1,99 +1,98 @@
- 
+[PM Install]{.underline}
 
-·       PM Install
+    Run npm install to install dependencies
 
-o   Run npm install to install dependencies
+[Remove Node Modules]{.underline}
 
-·       Remove Node Modules
+    [Add to scripts in package.json]{.underline}
 
-o   Add to scripts in package.json
+        "build": "npm build",
 
-§  "build": "npm build",
+        "clean": "rm -rf node_modules",
 
-§  "clean": "rm -rf node_modules",
+        "reinstall": "npm run clean && npm install",
 
-§  "reinstall": "npm run clean && npm install",
+        "rebuild": "npm run clean && npm install && npm run
+          build",
 
-§  "rebuild": "npm run clean && npm install && npm run build",
+    To run scripts use npm run [scriptName]
 
-o   To run scripts use npm run [scriptName]
+[Install version of react]{.underline}
 
-·      Install version of react
+    Npm I -g <create-react-app@1.5.2>
 
-o   Npm I -g create-react-app@1.5.2
+[Find and kill instance by port]{.underline}
 
-·      Find and kill instance by port
+    netstat -ano | findstr :3000
 
-o   netstat -ano | findstr :3000
+    taskkill /PID 8880 /F
 
-o   taskkill /PID 8880 /F
+[Install Prop types]{.underline}
 
-·      Install Prop types
+    Npm I prop-types
 
-o   Npm I prop-types
+    <https://reactjs.org/docs/typechecking-with-proptypes.html>
 
-o   https://reactjs.org/docs/typechecking-with-proptypes.html
+[Install lodash]{.underline}
 
-·      Install lodash
+    Npm I lodash
 
-o   Npm I lodash
+[Install routing]{.underline}
 
-·       Install routing
+    Npm I react-router-dom
 
-o   Npm I react-router-dom
+[Working with query strings]{.underline}
 
-·       Working with query strings
+    Npm I query-strings
 
-o   Npm I query-strings
+[Validation]{.underline}
 
-·       Validation
+    Npm I joy-browser
 
-o   Npm I joy-browser
+[http clients]{.underline}
 
-·       http clients
+    axios
 
-o   axios
+    jquery ajax
 
-o   jquery ajax
+    fetch api
 
-o   fetch api
+[TOASTER]{.underline}
 
-·       TOASTER
+    NPM I react-toastify
 
-o   NPM I react-toastify
+    In app.js
 
-o   In app.js
+        import {ToastContainer} from "react-toastify";
 
-§  import {ToastContainer} from "react-toastify";
+        import "react-toastify/dist/ReactToastify.css";
 
-§  import "react-toastify/dist/ReactToastify.css";
+        add toast container to main return
 
-§  add toast container to main return
+[LOGGING]{.underline}
 
-·       LOGGING
+    Sentry.io
 
-o   Sentry.io
+    $ npm install @sentry/browser
 
-o   $ npm install @sentry/browser
+    <https://docs.sentry.io/platforms/javascript/react/>
 
-o   https://docs.sentry.io/platforms/javascript/react/
+JSON Web Token decode
 
-·       JSON Web Token decode
+    Npm I jwt-decode@2.2.0
 
-o   Npm I jwt-decode@2.2.0
+DEPLOY
 
-·       DEPLOY
+    Yarn pack -> tar -xvzf /path/to/yourfile.tgz -C
+      /path/where/to/extract/
 
-o   Yarn pack -> tar -xvzf /path/to/yourfile.tgz -C /path/where/to/extract/
-o  
+    -
 
- 
+[Change ip or port when running]{.underline}
 
-Change ip or port when running
+<https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b>
 
-https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b
-
-https://stackoverflow.com/questions/42083275/running-react-code-on-other-machine
+<https://stackoverflow.com/questions/42083275/running-react-code-on-other-machine>
 
 In Linux and Mac terminals, it would be
 
@@ -105,318 +104,153 @@ In Windows, the command is slightly different
 $env:PORT=5000
 $env:HOST=IP ADDRESS
 
- 
+<Link to={`/products/${product.id}`}>{product.name}</Link>
 
-·       <Link to={`/products/${product.id}`}>{product.name}</Link>
+    Rather than <a>
 
-o   Rather than <a>
+Creating tags
 
-·       Creating tags
+    Ul>(li[className='test')2
 
-o   Ul>(li[className=’test’)*2
+Access the Dom
 
-·       Access the Dom
+    Const username = React.createRef() [create reference]
 
-o   Const username = React.createRef() [create reference]
+    <input ref={this.username} id="username"
+      type="text"className="form-control"/> [set reference]
 
-o   <input ref={this.username} id="username" type="text"className="form-control"/> [set reference]
+    const username = this.username.current.value; [use ref]
 
-o   const username = this.username.current.value; [use ref]
+Conditional Rendering
 
-·       Conditional Rendering
+    {error && <div className="alert
+      alert-danger">{error}</div>}
 
-o   {error && <div className="alert alert-danger">{error}</div>}
+[AXIOS]{.underline}
 
-·       AXIOS
+    Patch()
 
-o   Patch()
+        Used to update 1 or more properties
 
-§  Used to update 1 or more properties
+        Axios.patch(apiEndpoint + '/' + post.id, {title:
+          post.title});
 
-§  Axios.patch(apiEndpoint + ‘/’ + http://post.id , {title: post.title});
+    Put()
 
-o   Put()
+        Update all properties
 
-§  Update all properties
+            axios.put(apiEndpoint + '/' + post.id, post)
 
-·       axios.put(apiEndpoint + '/' + http://post.id , post)
+    Interceptors
 
-o   Interceptors
-
-§  axios.interceptors.response.use(success, error)
+        axios.interceptors.response.use(success, error)
 
 this.props.history.push('/');
 
-            used to navigate
+used to navigate
 
 localStorage.setItem('token', response.headers['x-auth-token']);
 
-            set local storage and access response header, need to have back end make headers visible
+set local storage and access response header, need to have back end make
+headers visible
 
-                                    .header("access-control-expose-headers", "x-auth-token")
+.header("access-control-expose-headers", "x-auth-token")
 
--for hovering
+[-for hovering]{.underline}
 
-            -use onMouseOver() and onMouseOut()
+-use onMouseOver() and onMouseOut()
 
-dangerouslySetInnerHTML- set html in a string
+dangerouslySetInnerHTMLset html in a string
 
-·       {__html: '<p>' + result?.themeSummary +'. <i>*Theme Of Significance.</i></p>'}
+{__html: '<p>' + result?.themeSummary +'. <i>Theme Of
+Significance.</i></p>'}
 
-·       <Tooltip title={<div dangerouslySetInnerHTML={modifiedToolTip}/>} childrenDisplayStyle="inline">
+<Tooltip title={<div dangerouslySetInnerHTML={modifiedToolTip}/>}
+childrenDisplayStyle="inline">
 
- 
+[useEffect()]{.underline}
 
-useEffect()
+-used after browser repaints DOM
 
-o   -used after browser repaints DOM
-
-o   -react will prioritize UI
-
-React.useEffect(() => {
-
-  // Will be invoked on the initial render
-
-  // and all subsequent re-renders.
-
-})
-
- 
+-react will prioritize UI
 
 React.useEffect(() => {
 
-  // Will be invoked on the initial render
+// Will be invoked on the initial render
 
-  // and when "id" or "authed" changes.
+// and all subsequent re-renders.
 
-}, [id, authed])
-
- 
+> })
 
 React.useEffect(() => {
 
-  // Will only be invoked on the initial render
+// Will be invoked on the initial render
 
-}, [])
+// and when "id" or "authed" changes.
 
- 
-
- 
+> }, [id, authed])
 
 React.useEffect(() => {
 
- 
+// Will only be invoked on the initial render
 
-  return () => {
+> }, [])
 
-    // invoked right before invoking
+React.useEffect(() => {
 
-    // the new effect on a re-render AND
+return () => {
 
-    // right before removing the component
+// invoked right before invoking
 
-    // from the DOM
+// the new effect on a re-render AND
 
-  }
+// right before removing the component
 
-})
+// from the DOM
 
- 
-
--Example-
-
-    
-
--the order- render, side effect, render, cleanup, side effect-
-
--getting window size-
-
-·      const [width, setWidth] = React.useState(window.innerWidth)
-const [height, setHeight] = React.useState(window.innerHeight)
-
-·       event listener for resize
-
-o   window.addEventListener("resize", listener)
-
-// const [width, setWidth] = useState(window.innerWidth)
-// const[padding, setPadding] = useState(0)
-//
-// const handleResize = ()=>{
-//   const x = (window.innerWidth < 1440 && window.innerWidth > 970)
-//     ? 1440 - window.innerWidth
-//     : 0;
-//
-//   setPadding(x)
-// }
-//
-// useEffect(() => {
-//   window.addEventListener("resize", handleResize);
-//
-//   if(window.innerWidth < 1440 && window.innerWidth > 960 ){
-//     setPadding(1440 - window.innerWidth )
-//   }
-// }, []);
-
- 
-
-Ellipsis example
-
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Tooltip } from '@talentplus/formation-ui';
-import { styled } from '@material-ui/styles';
-
-const EllipsisModifier = ({ textToModify, maxTextLength, ...rest }) => {
-  const [toolTipText, setToolTipText] = useState('');
-  const [label, setLabel] = useState('');
-  const textContainerRef = useRef();
-
-  const setToolTip = useCallback(() => {
-    const modify = textContainerRef?.current?.offsetWidth < textContainerRef?.current?.scrollWidth;
-    setToolTipText(modify ? textToModify : '');
-  }, [textToModify]);
-
-  useEffect(() => {
-    const textTooLong = textToModify.length > maxTextLength;
-
-    if (maxTextLength) {
-      setLabel(textTooLong ? textToModify.substring(0, maxTextLength) + '...' : textToModify);
-      setToolTipText(textTooLong ? textToModify : '');
-    } else {
-      window.addEventListener('resize', setToolTip);
-      setLabel(textToModify);
-      setToolTip();
-    }
-  }, [maxTextLength, setToolTip, textToModify]);
-
-  const TextContainer = styled('div')({
-    wordBreak: 'break-all',
-    whiteSpace: 'nowrap',
-    overflow: !maxTextLength ? 'hidden' : 'unset',
-    textOverflow: !maxTextLength ? 'ellipsis' : 'unset'
-  });
-
-  return (
-    <TextContainer ref={textContainerRef} {...rest} data-qa={'text-container-for-ellipis-text'}>
-      <Tooltip title={toolTipText} childrenDisplayStyle='inline' data-qa={'tooltip-for-ellipis-text'}>
-        {label}
-      </Tooltip>
-    </TextContainer>
-  );
-};
-
-export default EllipsisModifier;
-
- 
-
- 
-
- 
-
- 
-
- 
-
--React.useReducer(reducerFunction, initialValue, intializerFunction)
-
-export const resultsNameMapReducer = (resultsNameMap, payload) => {
-  const { action, data } = payload;
-  const { FILTER, NEW_DATA, REMOVE_ALL } = GROUP_RESULT_NAME_MAP;
-
-  switch (action) {
-    case FILTER:
-      data.forEach((result) => {
-        if (!resultsNameMap.has(result.id)) {
-          resultsNameMap.set(
-            result.id,
-            `${result.firstName} ${result.lastName}`
-          );
-        }
-      });
-      return resultsNameMap;
-    case NEW_DATA:
-      return new Map(
-        data.map((result) => [
-          result.id,
-          `${result.firstName} ${result.lastName}`
-        ])
-      );
-    case REMOVE_ALL:
-      return new Map();
-    default:
-      return resultsNameMap;
-}
-};
-
- 
-
-function resultsNameMapInit(groupMembers) {
-  return new Map(
-    groupMembers.map((result) => [
-      result.id,
-      `${result.firstName} ${result.lastName}`
-    ])
-  );
 }
 
- 
+> })
+>
+> -Example-
+>
+> ![](/Users/bpaxton/WebstormProjects/core-client/media/image1.png){width="2.5208333333333335in"
+> height="2.9895833333333335in"}
+>
+> -the orderrender, side effect, render, cleanup, side effect-
 
- 
-
-const [resultsNameMap, resultsNameMapDispatch] = useReducer(
-  resultsNameMapReducer,
-  groupMembers,
-  resultsNameMapInit
-);
-
- 
-
- 
-
-React Suspense - React 16.6 added a <Suspense> component that lets you “wait” for some code to load and declaratively specify a loading state (like a spinner) while we’re waiting:
-
-https://reactjs.org/docs/portals.html
-
- 
-
-React Portals - Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
-
-https://reactjs.org/docs/concurrent-mode-suspense.html
-
- 
-
- 
-
-JEST
-
- 
+## JEST
 
 Modify existing object in test
 
-     const modifiedProps = JSON.parse(JSON.stringify(defaultProps))
+```javascript
 
- 
+const modifiedProps = JSON.parse(JSON.stringify(defaultProps))
 
-REACT-TESTING
+REACT - TESTING
 
-            -MUTATION OBSERVER-
+- MUTATION
+OBSERVER -
 
-            global.MutationObserver = class {
+global.MutationObserver = class {
+    constructor(callback) {}
 
-  constructor(callback) {}
+    disconnect() {}
 
-  disconnect() {}
-
-  observe(element, initObject) {}
-
+    observe(element, initObject) {}
 };
+
 or
 
 global.MutationObserver = MutationObserver;
 
 HTMLCanvasElement
 
-      HTMLCanvasElement.prototype.getContext = jest.fn();
-·       fire button example
+HTMLCanvasElement.prototype.getContext = jest.fn();
+
+fire
+button
+example
 
 import React from 'react'
 
@@ -424,394 +258,191 @@ import {render, fireEvent} from 'react-testing-library'
 
 import Counter from '../lessons/02-testing-hooks'
 
- 
-
 test('counter increments the count', () => {
 
-  const {container} = render(<Counter />)
+    const {container} = render(<Counter/>)
 
-  const button = container.firstChild
+    const button = container.firstChild
 
-  expect(button.textContent).toBe('0')
+    expect(button.textContent).toBe('0')
 
-  fireEvent.click(button)
+    fireEvent.click(button)
 
-  expect(button.textContent).toBe('1')
+    expect(button.textContent).toBe('1')
 
 })
 
-o  
 
-ENZYME
+```
 
-https://enzymejs.github.io/enzyme/docs/api/selector.html
+## Enzyme
 
-https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/find.html
+<https://enzymejs.github.io/enzyme/docs/api/selector.html>
 
- 
+<https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/find.html>
 
-·      expect(wrapper.find('.App-intro').exists()).toBe(true)
+```javascript
 
-·      expect(wrapper.find('ul').children().length).toBe(3)
+expect(wrapper.find('.App-intro').exists()).toBe(true)
 
-·      expect(wrapper.find('ul').hasClass('tyler')).toBe(true)
+expect(wrapper.find('ul').children().length).toBe(3)
 
-·      expect(wrapper.find('h1').text()).toBe('Welcome to React')
+expect(wrapper.find('ul').hasClass('tyler')).toBe(true)
 
-·      expect(wrapper.find('[href="tyler"]').text()).toBe('Welcome to React')
+expect(wrapper.find('h1').text()).toBe('Welcome to React')
 
-·      expect(wrapper.find('[href="tyler ~ .clark"]').text()).toBe('Welcome to React')
+expect(wrapper.find('[href="tyler"]').text()).toBe('Welcome
+to
+React
+')
 
-·      expect(wrapper.find('[text="Some title"]').text()).toBe('Welcome to React')
+expect(wrapper.find('[href="tyler ~.clark
+"]').text()).toBe('Welcome to React')
 
-·      We can use the object property selector to find nodes by passing in an object that matches the property of a node as a selecto
+expect(wrapper.find('[text="Some
+title
+"]').text()).toBe('Welcome to React')
+```
 
-o   expect(wrapper.find({alt: 'logo'}).text()).toBe('Welcome to React')
+We can use the object property selector to find nodes by passing in
+an object that matches the property of a node as a selecto
 
-·      https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/setProps.html
+```javascript
+    expect(wrapper.find({alt: 'logo'}).text()).toBe('Welcome to React')
+```
 
-·       it('test with enzyme', () => {
+<https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/setProps.html>
 
-  const container = shallow(
+```javascript
 
-      <GoalCreationForm
+it('test with enzyme', () => {
+
+    const container = shallow(<GoalCreationForm
         {...defaultProps}
         currentStep={GOAL_CREATION_WIZARD.LANDING}
-      />
-  );
+    />);
 
-  container.setProps({owner: {
-      id: 123,
-      accountInfo: { clientSetupId: 1 },
-      userInfo : {
-        firstName: "John",
-        lastName: 'Wayne',
-        preferredName: "TheDuke"
-      }
-    }
-  })
+    container.setProps({
+        owner: {
+            id: 123, accountInfo: {clientSetupId: 1}, userInfo: {
+                firstName: "John", lastName: 'Wayne', preferredName: "TheDuke"
+            }
+        }
+    })
 
-  console.log(container.find({'data-qa' : 'goals-creation-title-name'}).at(0).html());
-  console.log(container.find({'data-qa' : 'goals-creation-title-name'}).html());
-  console.log(container.find({'data-qa' : 'goals-creation-title-name'}).text());
-  console.log(container.debug());
-  console.log(container.find("[variant='h5']").html());
-  expect(container.find({'data-qa' : 'goals-creation-title-name'}).exists()).toBe(true);
-  expect(container.find({'data-qa' : 'goals-creation-title-name'}).text()).toBe('Creating Goal for TheDuke Wayne');
+    console.log(container.find({
+        'data-qa': 'goals-creation-title-name'
+    }).at(0).html());
+    console.log(container.find({
+        'data-qa': 'goals-creation-title-name'
+    }).html());
+    console.log(container.find({
+        'data-qa': 'goals-creation-title-name'
+    }).text());
+    console.log(container.debug());
+    console.log(container.find("[variant='h5']").html());
+    expect(container.find({
+        'data-qa': 'goals-creation-title-name'
+    }).exists()).toBe(true);
+    expect(container.find({
+        'data-qa': 'goals-creation-title-name'
+    }).text()).toBe('Creating Goal for
+    TheDuke
+    Wayne
+    ');
 });
 
-·      use mount to fully render, can only set props on root, use dive to access child components
+```
 
-·      To test a component (with Jest) that contains <Route> and withRouter you need to import Router in you test
+use mount to fully render, can only set props on root, use dive to
+access child components
 
-o   import { BrowserRouter as Router } from 'react-router-dom';
+To test a component (with Jest) that
+contains<Route>and withRouter you need to import Router in you
+test
 
-o    it('containts stuff', ()=>{
-  const wrapper = mount(<Router><Footer/> </Router> )
-  console.log(wrapper.find('FooterContainer').html())
+```javascript
+    import {BrowserRouter as Router} from 'react-router-dom';
 
-expect(wrapper.find('a[href="https://talentmine.talentplus.com/s/contactsupport"]').text()).toBe('Contact Support')
+it('containts stuff', () => {
+    const wrapper = mount(<Router>
+        <Footer/>
+    </Router>)
+    console.log(wrapper.find('FooterContainer').html())
+
+    expect(wrapper.find('a[href="https://talentmine.talentplus.com/s/contactsupport"]').text()).toBe('Contact
+    Support
+    ')
 
 })
+```
 
-REACT TESTING LIB
+## REACT TESTING LIB
 
-Good example in solution https://stackoverflow.com/questions/62049553/how-to-use-test-id-in-material-ui-textfield
+### Good example in solution
 
- 
+<https://stackoverflow.com/questions/62049553/how-to-use-test-id-in-material-ui-textfield>
 
-        -Use queryBy   to test if something should be null
+### Use queryBy to test if something should be null
 
-      it('ellipsis should not appear for shared result viewer role', async () => {
+```javascript
 
-    render(
-
-        <LanguageProvider>
-
-            <CurrentUserContext.Provider value={{ user: sharedResultViewer }}>
-
-            <Members data={members} />
-
-            </CurrentUserContext.Provider>
-
-        </LanguageProvider>
-
-    );
-
-
+it('ellipsis should not appear for shared result viewer role', async () => {
+    render(<LanguageProvider>
+        <CurrentUserContext.Provider value={{user: sharedResultViewer}}>
+            <Members data={members}/>
+        </CurrentUserContext.Provider>
+    </LanguageProvider>);
 
     const ellipsisColumn = await waitFor(() => screen.queryByTestId('ellipses-action-buttons-members-table'))
-
     expect(ellipsisColumn).toBeNull()
-
 });
- 
 
- 
+```
 
- 
+### Firing events
 
-·      Firing events
+  ```javascript
+import userEvent from '@testing-library/user-event'
 
-o   import userEvent from '@testing-library/user-event'
+fire
+event
+and
+set
+value
 
-§  fire event and set value
+fireEvent.change(input, {
+    target: {
+        value: 'GroupA'
+    }
+})
 
-·      fireEvent.change(input, { target: { value: 'GroupA' } })
+userEvent.type(input, 'GroupA')
+```
 
-·    userEvent.type(input, 'GroupA')
+### Getting component
 
-·      Getting component
+```javascript
+    const {getByTestId, queryByTestId} = render(<CreateGroupForm
+    groups={groupNames}/>)
+```
 
-o   const {getByTestId, queryByTestId} = render (<CreateGroupForm groups={groupNames}/>)
+### Testing component
 
-·      Testing component
+```javascript
+    expect(input).toHaveValue('GROUP')
 
-o   expect(input).toHaveValue('GROUP')
-
- 
+```
 
 //needed due to tooltip calling document.createRange
-// otherwise will get error: Uncaught [TypeError: document.createRange is not a function]
+// otherwise will get error: Uncaught [TypeError: document.createRange
+is not a function]
+
+```javascript
 global.document.createRange = () => ({
-  setStart: () => {},
-  setEnd: () => {},
-  commonAncestorContainer: {
-    nodeName: 'BODY',
-    ownerDocument: document
-  }
+    setStart: () => {}, setEnd: () => {}, commonAncestorContainer: {
+        nodeName: 'BODY', ownerDocument: document
+    }
 });
+```
 
- 
-
- 
-
- 
-
- 
-
-REACT-HOOK-Forms
-
-       -testing context
-
-       https://medium.com/javascript-in-plain-english/using-react-hook-form-in-component-tests-497180abf3c0
-
- 
-
-function renderWithReactHookForm(ui, { defaultValues = {} } = {}) {
-  const Wrapper = ({ children }) => {
-    const methods = useForm({ defaultValues });
-    return (
-      <LanguageProvider>
-        <FormProvider {...methods}>{children}</FormProvider>
-      </LanguageProvider>
-    );
-  };
-
-  return {
-    ...render(ui, { wrapper: Wrapper })
-  };
-}
-
-describe('BasicSearch', () => {
-  beforeEach(() => {
-    renderWithReactHookForm(<BasicSearch />, {
-      defaultValues: {
-        firstName: 'Vic',
-        lastName: 'Vinegar'
-      }
-    });
-  });
-
-  it('BasicSearch should render withouth crashing', async () => {
-    expect(screen.getByTestId('group-first-name-search-input'));
-  });
-
-  it('first and last name inputs should have value', async () => {
-    expect(screen.getByTestId('group-first-name-search-input').value).toEqual(
-      'Vic'
-    );
-    expect(screen.getByTestId('group-last-name-search-input').value).toEqual(
-      'Vinegar'
-    );
-  });
-});
-
- 
-
--fire submit from parent
-
-     const submitMyForm = (data)=>{
-
-    formRef.current.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }))
-
-}
- 
-
- 
-
- 
-
--using controller component with select and autocomplete
-
- 
-
-<Controller
-  name={'users'}
-  control={control}
-  rules={{
-      required: "One user is required",
-    validate: (value) => (value.length < 11 ? true : 'Max of 10 results may be shared at a time.')
-  }}
-  render={({ onChange, value, ref, ...props }) => (
-    <Autocomplete
-      multiple
-      id='tags-standard'
-      options={userIds}
-      onChange={(e, data) => onChange(data)}
-      getOptionLabel={(option) => `${userOptions[option].firstName} ${userOptions[option].lastName}`}
-      filterSelectedOptions
-      renderTags={(value, getTagProps) =>
-        value.map((option, index) => (
-          <Chip
-              color="primary"
-            label={`${userOptions[option].firstName} ${userOptions[option].lastName}`}
-            {...getTagProps({ index })}
-          />
-        ))
-      }
-      renderInput={(params) => (
-        <TextField
-          {...params}
-          variant='outlined'
-          label='Search Users'
-          placeholder='Enter first name and/or last name'
-          InputLabelProps={{
-            shrink: true,
-            'data-qa': 'score-sheet-result-statement-label',
-            style: {
-              fontSize: '20px',
-              color: 'black',
-              display: 'block',
-              fontFamily: 'Open Sans, sans-serif',
-              fontWeight: 700
-            }
-          }}
-          error={!!errors?.users}
-          helperText={errors?.users?.message}
-        />
-      )}
-      {...props}
-    />
-  )}
-/>
-
-
-
-
-<Controller
-
-  name={'testSelect'}
-
-  control={control}
-
-  defaultValue={currency}
-
-  render={({ onChange, ...props }) => (
-
-    <TextField
-
-      id='standard-select-currency'
-
-      select
-
-      label='Select'
-
-      onChange={(e, data) => onChange(data.props.value)}
-
-      helperText='Please select your currency'
-
-      {...props}
-
-    >
-
-      {currencies.map((option) => (
-
-        <MenuItem key={option.value} value={option.value}>
-
-          {option.label}
-
-        </MenuItem>
-
-      ))}
-
-    </TextField>
-
-  )}
-
-/>
- 
-
- 
-
- 
-
--Material UI styling
-
-  
-
-·      passing props to styles
-
-·      https://blog.logrocket.com/8-awesome-features-of-styled-components/
-
-const Button = styled.button`
-
-    padding: 2px 5px;
-
-    color: ${props => props.theme.color};
-
-    border-radius: 3px;
-
-`
-
- 
-
-const Div = styled.div`
-
-    padding: 10px;
-
-    color: ${props => props.theme.color};
-
-    border: 1px solid ${props => props.theme.borderColor};
-
-·      https://stackoverflow.com/questions/62471093/better-way-to-use-material-system-with-styled-components
-
- 
-
-·       https://stackoverflow.com/questions/64213154/how-to-use-custom-props-and-theme-with-material-ui-styled-components-api-typesc
-
-·      https://material-ui.com/styles/basics/#adapting-based-on-props
-
-·      Preserving white space in typography
-
-o   https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
-
-o   <Typography data-qa="written-analysis-text" variant="body1" style={{whiteSpace: 'pre-wrap'}}>
-
-·       
-
-Material-Table
-
-·       table ref https://stackoverflow.com/questions/56264459/how-can-i-use-tableref-onrowselected-to-update-the-ui-via-the-onrowclick-propert
-
-·       selectors https://github.com/mbrn/material-table/issues/515
-
-o   https://github.com/mbrn/material-table/issues/686
-
- 
-
-· 
-
- 
-
- 
