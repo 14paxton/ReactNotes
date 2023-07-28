@@ -1,108 +1,18 @@
-[PM Install]{.underline}
-
-    Run npm install to install dependencies
-
-[Remove Node Modules]{.underline}
-
-    [Add to scripts in package.json]{.underline}
-
-        "build": "npm build",
-
-        "clean": "rm -rf node_modules",
-
-        "reinstall": "npm run clean && npm install",
-
-        "rebuild": "npm run clean && npm install && npm run
-          build",
-
-    To run scripts use npm run [scriptName]
-
-[Install version of react]{.underline}
-
-    Npm I -g <create-react-app@1.5.2>
-
-[Find and kill instance by port]{.underline}
-
-    netstat -ano | findstr :3000
-
-    taskkill /PID 8880 /F
-
-[Install Prop types]{.underline}
-
-    Npm I prop-types
-
-    <https://reactjs.org/docs/typechecking-with-proptypes.html>
-
-[Install lodash]{.underline}
-
-    Npm I lodash
-
-[Install routing]{.underline}
-
-    Npm I react-router-dom
-
-[Working with query strings]{.underline}
-
-    Npm I query-strings
-
-[Validation]{.underline}
-
-    Npm I joy-browser
-
-[http clients]{.underline}
-
-    axios
-
-    jquery ajax
-
-    fetch api
-
-[TOASTER]{.underline}
-
-    NPM I react-toastify
-
-    In app.js
-
-        import {ToastContainer} from "react-toastify";
-
-        import "react-toastify/dist/ReactToastify.css";
-
-        add toast container to main return
-
-[LOGGING]{.underline}
-
-    Sentry.io
-
-    $ npm install @sentry/browser
-
-    <https://docs.sentry.io/platforms/javascript/react/>
-
-JSON Web Token decode
-
-    Npm I jwt-decode@2.2.0
-
-DEPLOY
-
-    Yarn pack -> tar -xvzf /path/to/yourfile.tgz -C
-      /path/where/to/extract/
-
-    -
-
-[Change ip or port when running]{.underline}
+# [Change ip or port when running]{.underline}
 
 <https://dev.to/kevinmel2000/nodejs-reactjs-change-host-and-port-number-70b>
 
 <https://stackoverflow.com/questions/42083275/running-react-code-on-other-machine>
 
-In Linux and Mac terminals, it would be
+> In Linux and Mac terminals, it would be
 
-$export PORT=5000
-$export HOST=IP ADDRESS
+```export PORT=5000```
+```export HOST=IP ADDRESS```
 
-In Windows, the command is slightly different
+> In Windows, the command is slightly different
 
-$env:PORT=5000
-$env:HOST=IP ADDRESS
+```env:PORT=5000```
+```env:HOST=IP ADDRESS```
 
 <Link to={`/products/${product.id}`}>{product.name}</Link>
 
@@ -445,4 +355,3 @@ global.document.createRange = () => ({
     }
 });
 ```
-
