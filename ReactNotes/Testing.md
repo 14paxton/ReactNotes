@@ -25,6 +25,7 @@ const modifiedProps = JSON.parse(JSON.stringify(defaultProps))
 ```
 
 ## fire button example
+
 ```javascript
 import React from 'react'
 
@@ -49,6 +50,7 @@ test('counter increments the count', () => {
 ```
 
 ## use mount to fully render,
+
 > can only set props on root, use dive to access child components
 
 > To test a component (with Jest) that contains<Route>and withRouter you need to import Router in you test
@@ -240,7 +242,9 @@ describe("<EditProfileForm/>", () => {
 });
 
 ```
+
 > And then passing data - testid as an input prop on text field like this
+
 ```javascript
 <TextField
     id="outlined-name"
@@ -260,6 +264,7 @@ describe("<EditProfileForm/>", () => {
     variant="outlined"
 />
 ```
+
 ## Use queryBy to test if something should be null
 
 ```javascript

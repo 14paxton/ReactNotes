@@ -1,6 +1,6 @@
-## Add event listener to check if table loads
+# Add event listener to check if table loads
 
-#### add in component you are checking
+##add in component you are checking
 
  ```javascript
 useEffect(() => {
@@ -8,7 +8,7 @@ useEffect(() => {
 }, []);
 ```
 
-#### and in other componenet
+## and in other componenet
 
 ```javascript
      useEffect(() => {

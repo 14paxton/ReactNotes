@@ -1,6 +1,4 @@
-REACT-HOOK-Forms
-
--testing context
+# testing context
 
 <https://medium.com/javascript-in-plain-english/using-react-hook-form-in-component-tests-497180abf3c0>
 
@@ -53,7 +51,7 @@ const submitMyForm = (data) => {
 
 ```
 
--using controller component with select and autocomplete
+# using controller component with select and autocomplete
 
 ```javascript
 

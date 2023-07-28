@@ -1,17 +1,20 @@
 ## Mat table examples
+
 https://github.com/14paxton/TableWithAsyncCall/tree/main
 
 ## Use ref to update table info in parent
-`const updatePrivateGroupsTable = () => {
-    if (privateGroupTableRef?.current) {
-      privateGroupTableRef.current.onQueryChange();
-    }
-  };`
 
+`const updatePrivateGroupsTable = () => {
+if (privateGroupTableRef?.current) {
+privateGroupTableRef.current.onQueryChange();
+}
+};`
 
 ## misc.
+
 ### table ref
-  <https://stackoverflow.com/questions/56264459/how-can-i-use-tableref-onrowselected-to-update-the-ui-via-the-onrowclick-propert>
+
+<https://stackoverflow.com/questions/56264459/how-can-i-use-tableref-onrowselected-to-update-the-ui-via-the-onrowclick-propert>
 
 ### selectors <https://github.com/mbrn/material-table/issues/515>
 

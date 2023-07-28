@@ -1,19 +1,19 @@
-## Print separate page from current page
+# Print separate page from current page
 
 <a href="https://gist.github.com/14paxton/8bf4b0df10a7c4add52c9d4d2da88879"> print pre-defined page </a>
 
-## Working with Canvas to create image
+# Working with Canvas to create image
 
 https://github.com/14paxton/IFrameComponent/blob/main/CanvasFunctions.js
 
-## Force an Update
+# Force an Update
 
 ```javascript
     const [, updateState] = React.useState();
 const forceUpdate = React.useCallback(() => updateState({}), []);
 ```
 
-## recursive component example
+# recursive component example
 
 ```javascript
 const RecursiveWrapper = props => {
@@ -37,7 +37,7 @@ const RecursiveWrapper = props => {
 
 ```
 
-## dynamic component
+# dynamic component
 
 ```javascript
 const WebApp = (props) => {
@@ -97,3 +97,148 @@ export default function App() {
     </div>);
 }
 ```
+# hyperlink
+
+```javascript
+<Link to={`/products/${product.id}`}>{product.name}</Link>
+```
+> Rather than `<a>`
+
+# Creating tags
+
+```javascript
+    Ul > (li[className = 'test')
+2
+```
+
+# Access the Dom
+
+```javascript
+    Const
+username = React.createRef() [create
+reference
+]
+;
+
+<input ref={this.username} id="username"
+       type="text" className="form-control"/> [set
+reference
+]
+
+const username = this.username.current.value;
+[use ref]
+```
+
+# Conditional Rendering
+
+```javascript
+    {
+    error && <div className="alert
+      alert-danger">{error}</div>
+}
+```
+
+# Axios
+
+## Patch()
+
+>       Used to update 1 or more properties
+
+```javascript
+        Axios.patch(apiEndpoint + '/' + post.id, {
+    title: post.title
+});
+```
+
+## Put()
+
+>        Update all properties
+
+```javascript
+  axios.put(apiEndpoint + '/' + post.id, post)
+
+```
+
+## Interceptors
+
+```javascript
+        axios.interceptors.response.use(success, error)
+
+this.props.history.push('/');
+```
+
+# used to navigate
+
+```javascript
+this.props.history.push('/');
+```
+
+```javascript
+localStorage.setItem('token', response.headers['x-auth-token']);
+```
+
+# set local storage and access response header, need to have backend make headers visible> set local storage and access response header, need to have backend make headers visible
+
+```.header("access-control-expose-headers", "x-auth-token")```
+
+# dangerouslySetInnerHTMLset html in a string
+
+```javascript 
+{ __html: '<p>' + result?.themeSummary + '. <i>Theme Of Significance.</i></p> '}
+
+< Tooltip title={<div dangerouslySetInnerHTML={modifiedToolTip}/>} childrenDisplayStyle="inline">
+```
+
+# useEffect()
+
+> used after browser repaints DOM
+
+> react will prioritize UI
+
+```javascript
+React.useEffect(() => {
+
+// Will be invoked on the initial render
+
+// and all subsequent re-renders.
+
+>
+})
+```
+
+```javascript
+React.useEffect(() => {
+
+// Will be invoked on the initial render
+
+// and when "id" or "authed" changes.
+
+>
+}, [id, authed])
+```
+
+```javascript
+React.useEffect(() => {
+
+// Will only be invoked on the initial render
+
+>
+}, [])
+```
+
+```javascript
+React.useEffect(() => {
+
+    return () => {
+
+// invoked right before invoking
+
+// the new effect on a re-render AND
+
+// right before removing the component
+
+// from the DOM
+
+    }
+```
+
