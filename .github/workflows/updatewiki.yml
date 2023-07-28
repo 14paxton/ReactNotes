@@ -1,4 +1,5 @@
 ---
+name: Update Wiki
 on:
   push:
     branches:
@@ -6,7 +7,15 @@ on:
   pull_request:
     branches:
       - "master"
-name: Update Wiki
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   udpate-wiki:
     runs-on: ubuntu-latest
