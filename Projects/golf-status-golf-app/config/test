@@ -1,0 +1,2 @@
+REACT_APP_ENV=test
+REACT_APP_APPLICATION_SERVER_URL=https://ancient-brook-95282.herokuapp.com
